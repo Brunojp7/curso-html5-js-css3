@@ -284,7 +284,7 @@ header #logotipo {
 #call-to-action hr {
 	border: #FDE192 solid 4px;
 	width: 200px;
-	margin: 0 auto;
+	/*margin: 0 auto;*/
 }
 
 #call-to-action p {
@@ -438,4 +438,8 @@ footer .list-socials i {
 
 .row.thumbnails.owl-carousel div {
 	width: 100%;
+}
+
+video {
+	width: 60%;
 }

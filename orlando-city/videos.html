@@ -4,6 +4,7 @@
 		<meta charset="utf-8">
 		<title>Orlando City</title>
 		<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="plyr/dist/plyr.css">
 		<link rel="stylesheet" href="lib/owlcarousel/dist/assets/owl.carousel.min.css">
 		<link rel="stylesheet" href="lib/owlcarousel/dist/assets/owl.theme.default.min.css">
 		<link rel="stylesheet" href="css/orlando.css">
@@ -92,9 +93,73 @@
 
 					<div class="row">
 						
-						<video src="mp4/highlights.mp4" controls poster="img/highlights.jpg"></video>
+						<video poster="img/highlights.jpg" controls>
+						  <source src="mp4/highlights.mp4" type="video/mp4">
+						  <track kind="captions" label="Português (Brasil)" src="vtt/legendas.vtt" srclang="pt-br" default>
+						</video>
 
 					</div>
+
+			<div id="news" class="container" style="top: 0">
+
+				<div class="row text-center">
+					<h2>Latest News</h2>
+					<hr>
+				</div>
+
+				<div class="row thumbnails owl-carousel">
+					<div class="col-md-3 item" data-video="highlights">
+						
+						<img src="img/highlights.jpg" alt="Highlights">
+						<h3>Highlights</h3>
+
+					</div>
+					<div class="col-md-3 item" data-video="Orlando_City_Foundation_2015">
+
+						<img src="img/Orlando_City_Foundation_2015.jpg" alt="Foundation">
+						<h3>Orlando City Foundation 2015</h3>
+						
+					</div>
+					<div class="col-md-3 item" data-video="highlights">
+						
+						<img src="img/highlights.jpg" alt="Highlights">
+						<h3>Highlights</h3>
+
+					</div>
+					<div class="col-md-3 item" data-video="Orlando_City_Foundation_2015">
+
+						<img src="img/Orlando_City_Foundation_2015.jpg" alt="Foundation">
+						<h3>Orlando City Foundation 2015</h3>
+						
+					</div>
+					<div class="col-md-3 item" data-video="highlights">
+						
+						<img src="img/highlights.jpg" alt="Highlights">
+						<h3>Highlights</h3>
+
+					</div>
+					<div class="col-md-3 item" data-video="Orlando_City_Foundation_2015">
+
+						<img src="img/Orlando_City_Foundation_2015.jpg" alt="Foundation">
+						<h3>Orlando City Foundation 2015</h3>
+						
+					</div>
+					<div class="col-md-3 item" data-video="highlights">
+						
+						<img src="img/highlights.jpg" alt="Highlights">
+						<h3>Highlights</h3>
+
+					</div>
+					<div class="col-md-3 item" data-video="Orlando_City_Foundation_2015">
+
+						<img src="img/Orlando_City_Foundation_2015.jpg" alt="Foundation">
+						<h3>Orlando City Foundation 2015</h3>
+						
+					</div>
+				
+				</div>
+
+			</div>
 
 				</div>
 
@@ -193,35 +258,25 @@
 		</footer>
 
 		<script src="lib/jquery/jquery.min.js"></script>
+		<script src="plyr/dist/plyr.js"></script>
 		<script src="lib/owlcarousel/dist/owl.carousel.min.js"></script>
 		<script src="lib/bootstrap/js/bootstrap.min.js"></script>
-
+		<script src="js/efeitos.js"></script>
+		<script>plyr.setup();</script>
 		<script>
-			$(document).ready(function(){
+				
+				$(function(){
 
-				$("#logotipo").on("mouseover", function(){
+					$(".thumbnails .item").on("click", function(){
 
-					$("#banner h1").addClass('efeito');
+						$("video").attr({
+							"src": "mp4/"+$(this).data('video')+".mp4",
+							"poster": "img/"+$(this).data('video')+".jpg"
+						});
 
-				}).on("mouseout", function(){
-
-					$("#banner h1").removeClass('efeito');
-
-				});
-
-				$("#input-search").on("focus", function(){
-
-					$("li.search").addClass('ativo');
-
-				}).on("blur", function(){
-
-					$("li.search").removeClass('ativo');
+					});
 
 				});
-
-				$(".owl-carousel").owlCarousel();
-
-			});
 
 		</script>
 
