@@ -50,4 +50,16 @@
 	#banner h1 small {
 		font-size: 22px;
 	}
+
+	#news h2 {
+		font-size: 32px;
+	}
+
+	#news hr {
+		border-width: 4px;
+	}
+
+	.thumbnails {
+		text-align: center;
+	}
 }

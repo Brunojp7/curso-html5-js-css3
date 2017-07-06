@@ -447,3 +447,7 @@ video {
 #btn-bars, #btn-search {
 display: none;
 }
+
+div.item {
+	padding-right: 5px;
+}
