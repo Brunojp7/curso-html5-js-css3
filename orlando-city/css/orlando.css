@@ -333,7 +333,7 @@ footer .row p {
 }
 
 footer .row-cinza-claro{
-	height: 200px;
+	height: 240px;
 	background-color: #171f26;
 }
 
@@ -440,6 +440,10 @@ footer .list-socials i {
 	width: 100%;
 }
 
+div .owl-nav {
+    display: none;
+}
+
 video {
 	width: 60%;
 }
@@ -451,3 +455,8 @@ display: none;
 div.item {
 	padding-right: 5px;
 }
+
+.page-up {
+	display: none!important;
+}
+
