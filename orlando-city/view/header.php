@@ -34,7 +34,7 @@
 			</div>
 
 			<div class="container">
-				<img id="logotipo" src="img/orlando-logo.png" alt="Logotipo">
+				<a href="index.php"><img id="logotipo" src="img/orlando-logo.png" alt="Logotipo"></a>
 			</div>
 
 			<div class="header-black">
